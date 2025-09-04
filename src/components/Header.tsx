@@ -23,7 +23,7 @@ export function Header() {
 
             {/* Titre principal */}
             <div className="text-left">
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+              <h1 className="text-2xl md:text-5xl font-bold leading-tight">
                 Saint-Symphorien
               </h1>
               <div className="flex items-center mt-2 text-blue-100">
