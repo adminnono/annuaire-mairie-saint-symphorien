@@ -15,15 +15,16 @@ export function TabNavigation({
   commercesCount,
 }: TabNavigationProps) {
   return (
-    <div className="flex justify-center mb-8">
-      <div className="bg-white rounded-2xl shadow-lg p-2 border border-gray-200">
-        <div className="flex space-x-2">
+    <div className="flex justify-center mb-8 px-2">
+      <div className="bg-white rounded-2xl shadow-lg p-2 border border-gray-200 w-full sm:w-auto">
+        <div className="flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0">
+          {/* Bouton Associations */}
           <button
             onClick={() => onTabChange("associations")}
-            className={`flex items-center px-6 py-3 rounded-xl font-semibold transition-all duration-200 ${
+            className={`flex items-center justify-center sm:justify-start w-full sm:w-auto px-4 sm:px-6 py-3 rounded-xl font-semibold transition-all duration-200 text-sm sm:text-base ${
               activeTab === "associations"
                 ? "bg-blue-500 text-white shadow-md"
-                : "text-gray-600 hover:text-blue-600 hover:bg-blue-50"
+                : "bg-white text-gray-600 border border-gray-200 hover:text-blue-600 hover:bg-blue-50"
             }`}
           >
             <Users className="h-5 w-5 mr-2" />
@@ -39,12 +40,13 @@ export function TabNavigation({
             </span>
           </button>
 
+          {/* Bouton Commerces */}
           <button
             onClick={() => onTabChange("commerces")}
-            className={`flex items-center px-6 py-3 rounded-xl font-semibold transition-all duration-200 ${
+            className={`flex items-center justify-center sm:justify-start w-full sm:w-auto px-4 sm:px-6 py-3 rounded-xl font-semibold transition-all duration-200 text-sm sm:text-base ${
               activeTab === "commerces"
                 ? "bg-teal-500 text-white shadow-md"
-                : "text-gray-600 hover:text-teal-600 hover:bg-teal-50"
+                : "bg-white text-gray-600 border border-gray-200 hover:text-teal-600 hover:bg-teal-50"
             }`}
           >
             <Store className="h-5 w-5 mr-2" />
